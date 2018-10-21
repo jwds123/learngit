@@ -9,7 +9,9 @@ git status
 git add  #暂存
     git add hello.txt
     git add -A
+#修改
 git commit
+git commit -am "commit #"
 
 #远程仓库，切换到项目所在文件夹下,报错是因为当前目录没有.git文件
 git init
@@ -17,7 +19,9 @@ git remote add origin git@github.com:jwds123/learngit.git
 #一个项目可以同时拥有好几个远程仓库，为了区分通常会起不同的名字。通常主要的远程仓库被称为origin。
 git push
 #把本地的提交传送到服务器的动作叫做push。git push命令有两个参数，远程仓库的名字，以及分支的名字：
-git push origin master
+git push -u origin master
+#通过+master强行更新
+git push -u origin +master
 
 
 
