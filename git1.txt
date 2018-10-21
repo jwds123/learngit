@@ -11,6 +11,7 @@ git add  #暂存
     git add -A
 #修改
 git commit
+#a: add
 git commit -am "commit #"
 
 #远程仓库，切换到项目所在文件夹下,报错是因为当前目录没有.git文件
