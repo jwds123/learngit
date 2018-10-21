@@ -1,0 +1,30 @@
+git config --global user.name "jwds123"
+git config --global user.email "310912887@qq.com"
+ssh-keygen -t rsa -C "310912887@qq.com"
+open /Users/jw/.ssh/id_rsa.pub 
+
+cd /Users/jw/Desktop/coding/git
+git init
+git status 
+git add  #暂存
+    git add hello.txt
+    git add -A
+git commit
+
+#远程仓库，切换到项目所在文件夹下,报错是因为当前目录没有.git文件
+git init
+git remote add origin git@github.com:jwds123/learngit.git
+#一个项目可以同时拥有好几个远程仓库，为了区分通常会起不同的名字。通常主要的远程仓库被称为origin。
+git push
+#把本地的提交传送到服务器的动作叫做push。git push命令有两个参数，远程仓库的名字，以及分支的名字：
+git push origin master
+
+
+
+##别人
+git clone
+git pull
+#如果你更新了远程仓库上的内容，其他人可以通过git pull命令拉取你的变动：
+git pull origin master
+#将远程代码库中的代码pull到本地代码库，并且执行合并merge：
+git pull --rebase origin master
